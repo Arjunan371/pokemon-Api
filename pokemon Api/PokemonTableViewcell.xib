@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="499" id="JGD-eF-el4" customClass="pokemonTableViewCell" customModule="pokemon_Api" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="499"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JGD-eF-el4" id="Nte-CU-yR2">
+                <rect key="frame" x="0.0" y="0.0" width="453" height="499"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9pn-tp-nDY">
+                        <rect key="frame" x="101.66666666666669" y="10" width="250" height="250"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="Ctv-vz-Nik"/>
+                            <constraint firstAttribute="width" constant="250" id="n3z-yG-JZF"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ewt-wD-w6G">
+                            <size key="itemSize" width="250" height="250"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-1P-pw7">
+                        <rect key="frame" x="20" y="280" width="413" height="199"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mw-WW-rNY">
+                                <rect key="frame" x="0.0" y="0.0" width="413" height="36.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIj-gn-o2h">
+                                <rect key="frame" x="0.0" y="54.333333333333314" width="413" height="36.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXx-57-SPE">
+                                <rect key="frame" x="0.0" y="108.66666666666669" width="413" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBK-u3-j7h">
+                                <rect key="frame" x="0.0" y="162.66666666666669" width="413" height="36.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="h6W-1P-pw7" secondAttribute="trailing" constant="20" id="5JO-2I-nen"/>
+                    <constraint firstAttribute="bottom" secondItem="h6W-1P-pw7" secondAttribute="bottom" constant="20" id="BJE-ya-qPY"/>
+                    <constraint firstItem="9pn-tp-nDY" firstAttribute="top" secondItem="Nte-CU-yR2" secondAttribute="top" constant="10" id="DUh-6I-jdf"/>
+                    <constraint firstItem="h6W-1P-pw7" firstAttribute="top" secondItem="9pn-tp-nDY" secondAttribute="bottom" constant="20" id="IJF-Nu-avh"/>
+                    <constraint firstItem="9pn-tp-nDY" firstAttribute="centerX" secondItem="Nte-CU-yR2" secondAttribute="centerX" id="swF-OI-vzv"/>
+                    <constraint firstItem="h6W-1P-pw7" firstAttribute="leading" secondItem="Nte-CU-yR2" secondAttribute="leading" constant="20" id="zOv-af-scH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collection" destination="9pn-tp-nDY" id="Czq-hc-iP6"/>
+                <outlet property="height" destination="AXx-57-SPE" id="GGh-u8-EDP"/>
+                <outlet property="id" destination="3mw-WW-rNY" id="5xf-3F-rgH"/>
+                <outlet property="name" destination="lIj-gn-o2h" id="blx-kU-lXT"/>
+                <outlet property="weight" destination="OBK-u3-j7h" id="Bgq-WO-gGr"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="120"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -3,16 +3,15 @@ import Foundation
 import UIKit
 class PokemonViewModel: NSObject {
     
-//    var pokemonImaeArray: [PokemonImageArray] = []
+    
     var pokemonModels2: [PokemonModel2] = []
     var reloadTableView: (() -> ())?
-    var collectionReload: (() -> ())?
-  //  var responsedataModel: PokemonModel2?
+    
     // compute variable
     var filteredPokemonList: [PokemonModel2] {
-        pokemonModels2.sorted(by: {$0.id < $1.id})
+      return pokemonModels2.sorted(by: {$0.id < $1.id})
     }
-  
+    
     // return function
     //    func  filteredPokemonList() -> [PokemonModel2] {
     //    }
@@ -46,7 +45,7 @@ class PokemonViewModel: NSObject {
                     print("responce======>", result.count)
                     //                    self.counts = result.count
                 }
-            
+                
             }
             catch{
                 print(error)
@@ -76,8 +75,8 @@ class PokemonViewModel: NSObject {
                 let responsedata = try JSONDecoder().decode(PokemonModel2.self, from: SDdata)
                 self.pokemonModels2.append(responsedata)
                 print(responsedata)
-          //      self.responsedataModel = responsedata
-
+                //      self.responsedataModel = responsedata
+                
                 completion()
             }
             catch{
@@ -89,7 +88,7 @@ class PokemonViewModel: NSObject {
     }
     
     
-
+    
 }
 
 

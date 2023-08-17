@@ -29,19 +29,19 @@ class PokemonDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = false
         pokemonId.text = id
         pokemonName.text = name
         pokemonHeight.text = height
         pokemonWeight.text = weiht
         pokemonImage.sd_setImage(with: URL(string: image ?? "" ), placeholderImage: UIImage(systemName: "person.fill"))
-        forSementControl()
+        //    forSegmentControl()
         
     }
     @IBAction func sementAction(_ sender: UISegmentedControl) {
-        forSementControl()
+        forSegmentControl()
     }
-    func forSementControl(){
+    func forSegmentControl(){
         
         if segmentOne.selectedSegmentIndex == 0 && sementTwo.selectedSegmentIndex == 0{
             pokemonImage.image = nil
